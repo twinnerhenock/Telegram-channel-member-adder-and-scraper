@@ -15,16 +15,16 @@ import traceback
 import time
 import random
 
-api_id = 111111 #API ID
-api_hash = '45049565ff307d070e0a71de0b001b39' #API HASH
-phone = '+10000000000' #MOBILE NUMBER WITH COUNTRY CODE
+api_id = 27999746 #API ID
+api_hash = '1a99cfe6a21f5ed5d082177a40436816' #API HASH
+phone = '+1 437 237 6624' #MOBILE NUMBER WITH COUNTRY CODE
 client = TelegramClient(phone, api_id, api_hash)
  
 client.connect()
 if not client.is_user_authorized():
     client.send_code_request(phone)
     client.sign_in(phone, input('Enter the code: '))
-input_file = 'C:\\Users\\User\\Desktop\\members.csv' #LOCATION OF THE FILE CONTAINING USERS INFO
+input_file = 'members.csv' #LOCATION OF THE FILE CONTAINING USERS INFO
 users = []
 with open(input_file, encoding='UTF-8') as f:
     rows = csv.reader(f,delimiter=",",lineterminator="\n")
