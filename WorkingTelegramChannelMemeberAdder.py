@@ -41,7 +41,7 @@ chats = []
 last_date = None
 chunk_size = 20000
 groups=[]
-channeluser= 'LetsSwingg' #USERNAME OF THE CHANNEL WHERE THE MEMBERS WILL BE ADDED
+channeluser= 'business key' #USERNAME OF THE CHANNEL WHERE THE MEMBERS WILL BE ADDED
 
 result = client(GetDialogsRequest(
              offset_date=last_date,
