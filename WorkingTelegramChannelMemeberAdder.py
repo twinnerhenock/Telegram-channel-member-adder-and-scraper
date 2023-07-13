@@ -75,7 +75,7 @@ for user in users:
         elif mode == 2:
             user_to_add = InputPeerUser(user['id'], user['access_hash'])
             time.sleep(2)
-            AskedJoinedUsers = 'C:\\Users\\User\\Desktop\\AskedJoinedUsers.csv' #CREATING THE LIST OF USERS THAT WERE USED TO JOINED THE CHANNEL
+            AskedJoinedUsers = 'AskedJoinedUsers.csv' #CREATING THE LIST OF USERS THAT WERE USED TO JOINED THE CHANNEL
             with open(AskedJoinedUsers, 'a+', encoding='UTF-8') as g:
                 writer = csv.writer(g,delimiter=",",lineterminator="\n")
                 writer.writerow([user['id']])
@@ -93,7 +93,7 @@ for user in users:
     except UserPrivacyRestrictedError:
         print("The user's privacy settings do not allow you to do this. Skipping.")
         n=n-1
-        NotJoinedUsers = 'C:\\Users\\User\\Desktop\\NotJoinedUsers.csv' #New file that stores the data of the users that were not able to join the channel
+        NotJoinedUsers = 'NotJoinedUsers.csv' #New file that stores the data of the users that were not able to join the channel
         with open(NotJoinedUsers, 'a+', encoding='UTF-8') as g:
             writer = csv.writer(g,delimiter=",",lineterminator="\n")
             writer.writerow([user['id']])
